@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Simple Calculator"
+        android:text="SimpleCalculator"
         android:textStyle="bold"
         android:background="#4B1306"
         android:textColor="#FFFFFF"
@@ -21,53 +21,58 @@
         />
 
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"
         android:layout_marginTop="20dp"
-        android:hint="0"
-        android:id="@+id/Display"
+        android:hint="Result"
+        android:id="@+id/etDisplay"
         />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp">
+        android:layout_marginStart="10dp">
 
 
         <Button
+            android:id="@+id/etOne"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
             android:hint="1"
-            android:id="@+id/One"
-
-            />
+            android:textSize="25sp" />
 
         <Button
 
+            android:id="@+id/etTwo"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
             android:hint="2"
-            android:id="@+id/Two"/>
+            android:textSize="25sp" />
 
         <Button
 
+            android:id="@+id/etThree"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
             android:hint="3"
-            android:id="@+id/Three"/>
+            android:textSize="25sp" />
 
         <Button
 
+            android:id="@+id/etSum"
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
             android:hint="+"
-            android:textSize="40dp"
-            android:id="@+id/Sum"/>
+            android:textSize="25sp" />
 
 
     </LinearLayout>
@@ -79,37 +84,43 @@
 
 
         <Button
+            android:id="@+id/etFour"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
             android:hint="4"
-            android:id="@+id/Four"
-            />
+            android:textSize="25sp" />
 
         <Button
 
+            android:id="@+id/etFive"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
             android:hint="5"
-            android:id="@+id/Five"/>
+            android:textSize="25sp" />
 
         <Button
 
+            android:id="@+id/etSix"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
             android:hint="6"
-            android:id="@+id/Six"/>
+            android:textSize="25sp" />
 
         <Button
 
+            android:id="@+id/etSub"
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
             android:hint="-"
-            android:textSize="40dp"
-            android:id="@+id/Sub"/>
+            android:textSize="25sp" />
 
 
     </LinearLayout>
@@ -117,42 +128,95 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp">">
+        android:layout_marginLeft="10dp">
 
 
         <Button
+            android:id="@+id/etSeven"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
             android:hint="7"
-            android:id="@+id/Seven"
-            />
+            android:textSize="25sp" />
 
         <Button
 
+            android:id="@+id/etEight"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
             android:hint="8"
-            android:id="@+id/Eight"/>
+            android:textSize="25sp" />
 
         <Button
 
+            android:id="@+id/etNine"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
             android:hint="9"
-            android:id="@+id/Nine"/>
+            android:textSize="25sp" />
+
+        <Button
+
+            android:id="@+id/etMul"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
+            android:hint="*"
+            android:textSize="25sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+
+
+        <Button
+            android:id="@+id/etZero"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
+            android:hint="0"
+            android:textSize="25sp" />
+
+        <Button
+
+            android:id="@+id/etDot"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
+            android:hint="."
+            android:textSize="25sp" />
+
+        <Button
+
+            android:id="@+id/etAnswer"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="25dp"
+            android:background="@android:color/holo_green_dark"
+            android:hint="="
+            android:textSize="40sp" />
 
         <Button
 
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
-            android:hint="="
-            android:textSize="40dp"
-            android:id="@+id/Result"
-            />
+            android:hint="/"
+            android:id="@+id/etDiv"
+            android:background="@android:color/darker_gray"
+            android:textSize="25sp" />
 
 
     </LinearLayout>
