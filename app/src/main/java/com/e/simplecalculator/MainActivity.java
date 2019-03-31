@@ -11,9 +11,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         TextView etDisplay;
-        Button etOne, etTwo, etThree, etFour, etFive, etSix, etSeven, etEight, etNine, etZero, etSum, etSub, etAnswer, etDot, etMul, etDiv;
-        Boolean var1, var2;
-        Double sum, sub, mul, div;
+        Button etOne, etTwo, etThree, etFour, etFive, etSix, etSeven, etEight, etNine, etZero, etSum, etSub, etAnswer, etC, etMul, etDiv;
+        Double var1, var2;
+        Boolean sum, sub, mul, div;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         etEight = findViewById(R.id.etEight);
         etNine = findViewById(R.id.etNine);
         etZero = findViewById(R.id.etZero);
-        etDot =findViewById(R.id.etDot);
+        etC =findViewById(R.id.etC);
         etSum = findViewById(R.id.etSum);
         etSub = findViewById(R.id.etSub);
         etMul = findViewById(R.id.etMul);
@@ -109,12 +109,78 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        etDot.setOnClickListener(new View.OnClickListener() {
+        etC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                etDisplay.setText(etDisplay.getText()+".");
+                etDisplay.setText("");
             }
         });
+
+        etSum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                var1=Double.parseDouble(etDisplay.getText()+"");
+                sum=true;
+                etDisplay.setText(null);
+            }
+        });
+
+        etSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                var1=Double.parseDouble(etDisplay.getText()+"");
+                sub=true;
+                etDisplay.setText(null);
+            }
+        });
+
+        etMul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                var1=Double.parseDouble(etDisplay.getText()+"");
+                mul=true;
+                etDisplay.setText(null);
+            }
+        });
+
+        etDiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                var1=Double.parseDouble(etDisplay.getText()+"");
+                div=true;
+                etDisplay.setText(null);
+            }
+        });
+
+
+        etAnswer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                var2 =  Double.parseDouble(etDisplay.getText()+"");
+                if(sum==true)
+                {
+                    etAnswer.setText(var1+var2+"");
+                    sum=false;
+                }
+                if(sub==true)
+                {
+                    etAnswer.setText(var1-var2+"");
+                    sub=false;
+                }
+                if(mul==true)
+                {
+                    etAnswer.setText(var1*var2+"");
+                    mul=false;
+                }
+                if(div==true)
+                {
+                    etAnswer.setText(var1/var2+"");
+                    div=false;
+                }
+            }
+        });
+
+
 
     }
 }
